@@ -1,0 +1,599 @@
+{
+	// C, C++
+	"ccls": {
+		"command": ["ccls"],
+		"enabled": false,
+		"initialization_options": {
+			"cache": {
+				"directory": "/tmp/ccls-cache",
+			},
+			"completion": {
+				"detailedLabel": true,
+			},
+			"clang": {
+				"extraArgs": [
+					"--query-driver=/opt/homebrew/bin/gcc-*,/opt/homebrew/bin/g++-*",
+					// "-isystem",
+					// "/Library/Developer/CommandLineTools/usr/include/c++/v1",
+				],
+				"resourceDir": "/opt/homebrew/opt/llvm/lib/clang/19",
+			},
+		},
+		"selector": "source.c | source.c++ | source.objc | source.objc++ | source.cuda-c++",
+	},
+
+	// CMake
+	"neocmakelsp": {
+		"command": ["neocmakelsp", "stdio"],
+		"enabled": true,
+		"selector": "source.cmake",
+	},
+	"cmake-language-server": {
+		"command": ["cmake-language-server"],
+		"enabled": true,
+		"selector": "source.cmake",
+	},
+	"efm:cmake-lint": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/cmake-cmake-lint.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.cmake",
+	},
+	"efm:gersemi": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/cmake-gersemi.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"documentFormatting": true,
+			"documentRangeFormatting": false,
+		},
+		"selector": "source.cmake",
+	},
+
+	// Containerfile
+	"efm:hadolint": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/containerfile-hadolint.yaml"],
+		"enabled": true,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentSymbol": true,
+		},
+		"selector": "source.containerfile | source.dockerfile",
+	},
+	"docker": {
+		"command": ["docker-language-server", "start", "--stdio"],
+		"enabled": true,
+		"initialization_options": {
+			"dockercomposeExperimental": {
+				"composeSupport:": false,
+			},
+			"dockerfileExperimental": {
+				"removeOverlappingIssues:": true,
+			},
+			"telemetry": "off",
+		},
+		"selector": "source.containerfile | source.dockerfile",
+	},
+
+	// CSV
+	"efm:csvlint": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/csv-csvlint.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.csv",
+	},
+
+	// Git commits
+	"efm:gitlint": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/gitcommit-gitlint.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.gitcommit",
+	},
+
+	// HTML
+	"efm:html-prettier": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/html-prettier.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+		},
+		"selector": "text.html",
+	},
+
+	// JSON
+	"efm:fixjson": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/json-fixjson.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.json",
+	},
+	"efm:json-prettier": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/json-prettier.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+		},
+		"selector": "text.json",
+	},
+
+	// JavaScript and TypeScript
+	"quick-lint-js": {
+		"command": ["quick-lint-js", "--lsp-server"],
+		"enabled": true,
+		"selector": "source.js | source.jsx | source.ts | source.tsx",
+	},
+
+	// Lua
+	"efm:luacheck": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/lua-luacheck.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.lua",
+	},
+	"efm:stylua": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/lua-stylua.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+		},
+		"selector": "source.lua",
+	},
+
+	// Makefile
+	"efm:checkmake": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/makefile-checkmake.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.makefile",
+	},
+
+	// Markdown
+	"rumdl": {
+		"command": ["rumdl", "server"],
+		"enabled": true,
+		"selector": "text.html.markdown",
+	},
+	"markmark-lsp": {
+		"command": ["mise", "x", "--", "markmark-lsp", "--stdio"],
+		"enabled": true,
+		"selector": "text.html.markdown",
+	},
+	"efm:markdownlint-cli": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/markdown-markdownlint-cli.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "text.html.markdown",
+	},
+	"efm:markdownlint-cli2": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/markdown-markdownlint-cli2.yaml"],
+		"enabled": true,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "text.html.markdown",
+	},
+
+	// Perl
+	"perlnavigator": {
+		"command": ["mise", "x", "--", "perlnavigator", "--stdio"],
+		"enabled": true,
+		"settings": {
+			//"perlnavigator.perltidyProfile": "~/.perltidyrc",
+			//"perlnavigator.perlcriticProfile": "~/.perlcriticrc",
+			//"perlnavigator.perlEnvAdd": true,
+			//"perlnavigator.perlEnv": {
+			//	"KOHA_CONF": "/home/user/git/KohaCommunity/t/data/koha-conf.xml",
+			//},
+			//"perlnavigator.perlPath": "~/perl5/perlbrew/perls/perl-5.38.2/bin",
+			//"perlnavigator.perlcriticSeverity": 1,
+			//"perlnavigator.perlcriticEnabled": true,
+			//"perlnavigator.enableWarnings": true,
+			"perlnavigator.includePaths": [
+				// Used for syntax checking, typically local project roots.
+				// NOT used for finding installed modules such as perlcritic/perltidy/perlimports.
+				// Supports "$workspaceFolder", no need to include "$workspaceFolder/lib/".,
+			],
+			"perlnavigator.perlParams": [
+				// This is a list of arguments always passed to Perl.
+				// Does not support $workspaceFolder.
+				// Useful for finding perlcritic/perltidy/perlimports.
+				// "-I/path/to/local/perl5/bin",
+			],
+		},
+		"selector": "source.perl",
+	},
+	"efm:perlcritic": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/perl-perlcritic.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.perl",
+	},
+	"efm:perltidy": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/perl-perltidy.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.perl",
+	},
+
+	// Python
+	"ty": {
+		"command": ["ty", "server"],
+		"enabled": true,
+		"selector": "source.python",
+	},
+	"efm:black": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/python-black.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+		},
+		"selector": "source.python",
+	},
+	"efm:isort": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/python-isort.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+		},
+		"selector": "source.python",
+	},
+
+	// reStructuredText, Sphinx
+	"efm:rst-lint": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/restructuredtext-rst-lint.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.restructuredtext",
+	},
+	"esbonio": {
+		"command": ["mise", "x", "--", "esbonio", "server"],
+		"enabled": true,
+		"selector": "text.restructuredtext",
+	},
+
+	// Ruby
+	"solargraph": {
+		"command": ["mise", "x", "--", "solargraph", "stdio"],
+		"enabled": true,
+		"initialization_options": {
+			"diagnostics": true,
+		},
+		"selector": "source.ruby | text.html.ruby | text.html.rails",
+	},
+	"rubocop": {
+		"command": ["mise", "x", "--", "rubocop", "--lsp"],
+		"enabled": true,
+		"selector": "source.ruby | text.html.ruby | text.html.rails",
+	},
+	"sorbet": {
+		"command": ["mise", "x", "--", "srb", "tc",
+			"--typed", "true",
+			"--enable-all-experimental-lsp-features",
+			"--lsp",
+			"--disable-watchman",
+		],
+		"enabled": false,
+		"selector": "source.ruby | text.html.ruby | text.html.rails",
+	},
+	"ruby-lsp": {
+		"command": ["mise", "x", "--", "ruby-lsp"],
+		"enabled": false,
+		"initialization_options": {
+			"enabledFeatures": {
+				"diagnostics": false,
+			},
+			"experimentalFeaturesEnabled": true,
+		},
+		"selector": "source.ruby | text.html.ruby",
+	},
+
+	// shell
+	"efm:shellcheck": {
+		"selector": "source.shell",
+		"enabled": true,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/shell-shellcheck.yaml"],
+		"initialization_options": {
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"hover": true,
+			"documentSymbol": true,
+			"codeAction": true,
+			"completion": true,
+		},
+	},
+	"efm:shfmt": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/shell-shfmt.yaml"],
+		"enabled": false,
+		"selector": "source.shell",
+		"initialization_options": {
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"codeAction": true,
+		},
+	},
+	"diagnosticls:shellcheck": {
+		"command": ["diagnostic-languageserver", "--stdio"],
+		"enabled": false,
+		"selector": "source.shell.bash",
+		"initialization_options": {
+			"linters": {
+				"shellcheck": {
+					"command": "shellcheck",
+					"args": ["--format=json", "--external-sources", "-"],
+					"debounce": 100,
+					"formatLines": 1,
+					"offsetLine": 0,
+					"offsetColumn": 0,
+					"sourceName": "shellcheck",
+					"parseJson": {
+						"line": "line",
+						"column": "column",
+						"endLine": "endLine",
+						"endColumn": "endColumn",
+						"security": "level",
+						"message": "\\${message} [\\${code}]",
+					},
+					"securities": {
+						"error": "error",
+						"warning": "warning",
+						"note": "info",
+					},
+				},
+			},
+			"formatters": {},
+			"filetypes": {
+				"shellscript": "shellcheck",
+			},
+		},
+	},
+
+	// TeX, LaTeX
+	"digestif": {
+		"command": ["digestif"],
+		"enabled": true,
+		"selector": "text.tex | text.tex.latex",
+	},
+
+	// TOML
+	"tombi": {
+		"command": ["tombi", "lsp"],
+		"enabled": true,
+		"selector": "source.toml",
+	},
+
+	// Vim script
+	"efm:vint": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/viml-vint.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.viml",
+	},
+
+	// YAML
+	"efm:yamllint": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/yaml-yamllint.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"completion": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+			"documentSymbol": true,
+			"hover": true,
+		},
+		"selector": "source.yaml",
+	},
+	"efm:yaml-prettier": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/yaml-prettier.yaml"],
+		"enabled": false,
+		"initialization_options": {
+			"codeAction": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+		},
+		"selector": "source.yaml",
+	},
+
+	// Zig
+	"zls": {
+		"command": ["zls"],
+		"enabled": false,
+		"selector": "source.zig",
+	},
+
+	// Multiple languages
+	"efm:prettierd": {
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/prettierd.yaml"],
+		"enabled": true,
+		"initialization_options": {
+			"codeAction": true,
+			"documentFormatting": true,
+			"documentRangeFormatting": true,
+		},
+		"selector": "source.css | source.js | source.json | source.jsx | source.ts | source.tsx | source.yaml | text.html | text.html.markdown | text.html.svelte | text.html.vue",
+	},
+
+
+	// "shellcheck (diagnostic-ls)": {
+	// 	"enabled": true,
+	// 	"command": ["diagnostic-languageserver", "--stdio"],
+	// 	"selector": "source.shell.bash",
+	// 	"initialization_options": {
+	// 		"linters": {
+	// 			"shellcheck": {
+	// 				"command": "shellcheck",
+	// 				"args": ["--format=json", "-"],
+	// 				"debounce": 100,
+	// 				"formatLines": 1,
+	// 				"offsetLine": 0,
+	// 				"offsetColumn": 0,
+	// 				"sourceName": "shellcheck",
+	// 				"parseJson": {
+	// 					"line": "line",
+	// 					"column": "column",
+	// 					"endLine": "endLine",
+	// 					"endColumn": "endColumn",
+	// 					"security": "level",
+	// 					"message": "\\${message} [\\${code}]",
+	// 				},
+	// 				"securities": {
+	// 					"error": "error",
+	// 					"warning": "warning",
+	// 					"note": "info",
+	// 				},
+	// 			},
+	// 		},
+	// 		"filetypes": {
+	// 			"shellscript": [
+	// 				"shellcheck",
+	// 			],
+	// 		},
+	// 		"formatters": {
+	// 			"shfmt": {
+	// 				"command": "shfmt",
+	// 			},
+	// 		},
+	// 		"formatFiletypes": {
+	// 			"shellscript": "shfmt",
+	// 		},
+	// 	},
+	// },
+
+	// "zsh (diagnostic-ls)": {
+	// 	"enabled": true,
+	// 	"command": ["diagnostic-languageserver", "--stdio"],
+	// 	"selector": "source.shell.zsh",
+	// 	"initialization_options": {
+	// 		"linters": {
+	// 			"zsh -n": {
+	// 				"command": "zsh",
+	// 				"args": ["-noexec", "%file"],
+	// 				"isStdout": false,
+	// 				"isStderr": true,
+	// 				"sourceName": "zsh",
+	// 				"formatLines": 1,
+	// 				"formatPattern": [
+	// 					"^[^:]+:(\\d+):\\s+(.*)$",
+	// 					{
+	// 						"line": 1,
+	// 						"message": 2,
+	// 					}
+	// 				],
+	// 			},
+	// 			"zsh-sweep": {
+	// 				"command": "zsweep",
+	// 				"args": ["--auto", "%file"],
+	// 				"sourceName": "zsweep",
+	// 				"formatLines": 1,
+	// 				"formatPattern": [
+	// 					"^[^:]+:(\\d+):\\s+(.*)$",
+	// 					{
+	// 						"line": 1,
+	// 						"message": 2
+	// 					}
+	// 				]
+	// 			},
+	// 		},
+	// 		"filetypes": {
+	// 			"shellscript": [
+	// 				"zsh -n",
+	// 			],
+	// 		},
+	// 		"formatters": {
+	// 			"shfmt": {
+	// 				"command": "shfmt",
+	// 			},
+	// 		},
+	// 		"formatFiletypes": {
+	// 			"shellscript": "shfmt",
+	// 		},
+	// 	},
+	// },
+}
