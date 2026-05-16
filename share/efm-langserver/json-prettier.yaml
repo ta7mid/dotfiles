@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  json-prettier: &json-prettier
+    format-command: "prettier --parser json"
+languages:
+  json:
+    - <<: *json-prettier

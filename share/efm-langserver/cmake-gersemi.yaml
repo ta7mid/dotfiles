@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  cmake-gersemi: &cmake-gersemi
+    format-command: "gersemi -"
+    format-stdin: true
+languages:
+  cmake:
+    - <<: *cmake-gersemi

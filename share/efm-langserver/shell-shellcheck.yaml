@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  shell-shellcheck: &shell-shellcheck
+    lint-command: "shellcheck -f gcc -x"
+    lint-source: "shellcheck"
+    lint-formats:
+      - "%f:%l:%c: %trror: %m"
+      - "%f:%l:%c: %tarning: %m"
+      - "%f:%l:%c: %tote: %m"
+languages:
+  shell:
+    - <<: *shell-shellcheck

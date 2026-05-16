@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  html-prettier: &html-prettier
+    format-command: >
+      prettier --parser html
+        ${--tab-width:tabWidth} ${--single-quote:singleQuote}
+languages:
+  html:
+    - <<: *html-prettier

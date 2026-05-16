@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  prettierd: &prettierd
+    format-command: >
+      prettierd ${INPUT} ${--range-start=charStart} ${--range-end=charEnd}
+        ${--tab-width=tabSize}
+    format-stdin: true
+    root-markers:
+      - .prettierrc
+      - .prettierrc.cjs
+      - .prettierrc.js
+      - .prettierrc.json
+      - .prettierrc.json5
+      - .prettierrc.mjs
+      - .prettierrc.toml
+      - .prettierrc.yaml
+      - .prettierrc.yaml
+      - .prettierrc.yml
+      - prettier.config.js
+      - prettier.config.cjs
+      - prettier.config.mjs
+languages:
+  css:
+    - <<: *prettierd
+  html:
+    - <<: *prettierd
+  javascript:
+    - <<: *prettierd
+  json:
+    - <<: *prettierd
+  jsx:
+    - <<: *prettierd
+  markdown:
+    - <<: *prettierd
+  svelte:
+    - <<: *prettierd
+  tsx:
+    - <<: *prettierd
+  typescript:
+    - <<: *prettierd
+  vue:
+    - <<: *prettierd
+  yaml:
+    - <<: *prettierd

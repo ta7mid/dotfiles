@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  gitcommit-gitlint: &gitcommit-gitlint
+    lint-command: "gitlint"
+    lint-stdin: true
+    lint-formats:
+      - '%l: %m: "%r"'
+      - "%l: %m"
+languages:
+  gitcommit:
+    - <<: *gitcommit-gitlint

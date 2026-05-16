@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  markdown-markdownlint-cli: &markdown-markdownlint-cli
+    lint-command: "markdownlint-cli -s -c ~/.markdownlintrc"
+    lint-stdin: true
+    lint-formats:
+      - "%f:%l %m"
+      - "%f:%l:%c %m"
+      - "%f: %l: %m"
+languages:
+  markdown:
+    - <<: *markdown-markdownlint-cli

@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  restructuredtext-rst-lint: &restructuredtext-rst-lint
+    lint-command: "rst-lint"
+    lint-formats:
+      - "%tNFO %f:%l %m"
+      - "%tARNING %f:%l %m"
+      - "%tRROR %f:%l %m"
+      - "%tEVERE %f:%l %m"
+languages:
+  restructuredtext:
+    - <<: *restructuredtext-rst-lint

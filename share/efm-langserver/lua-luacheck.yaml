@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  lua-luacheck: &lua-luacheck
+    lint-command: "luacheck --codes --no-color --quiet -"
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%.%#:%l:%c: (%t%n) %m"
+    root-markers:
+      - .luacheckrc
+languages:
+  lua:
+    - <<: *lua-luacheck

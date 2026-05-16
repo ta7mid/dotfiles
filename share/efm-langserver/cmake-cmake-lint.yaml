@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  cmake-cmake-lint: &cmake-cmake-lint
+    lint-command: "cmakelint"
+    lint-stdin: false
+    lint-formats:
+      - "%f:%l,%c: [%s] %m"
+languages:
+  cmake:
+    - <<: *cmake-cmake-lint

@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  json-fixjson: &json-fixjson
+    format-command: "fixjson"
+languages:
+  json:
+    - <<: *json-fixjson

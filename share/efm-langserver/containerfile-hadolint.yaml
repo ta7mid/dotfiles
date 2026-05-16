@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  containerfile-hadolint: &containerfile-hadolint
+    lint-command: "hadolint"
+    lint-formats:
+      - "%f:%l %m"
+languages:
+  containerfile:
+    - <<: *containerfile-hadolint

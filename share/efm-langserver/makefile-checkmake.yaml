@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  makefile-checkmake: &makefile-checkmake
+    lint-command: "checkmake"
+    lint-stdin: true
+languages:
+  makefile:
+    - <<: *makefile-checkmake

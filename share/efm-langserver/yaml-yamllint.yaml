@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  yaml-yamllint: &yaml-yamllint
+    lint-command: "yamllint -f parsable -"
+    lint-stdin: true
+languages:
+  yaml:
+    - <<: *yaml-yamllint

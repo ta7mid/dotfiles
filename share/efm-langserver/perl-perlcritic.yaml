@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  perl-perlcritic: &perl-perlcritic
+    format-command: "perlcritic -b"
+    format-stdin: true
+languages:
+  perl:
+    - <<: *perl-perlcritic

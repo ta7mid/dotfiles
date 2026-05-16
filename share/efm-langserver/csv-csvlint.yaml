@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mattn/efm-langserver/refs/heads/master/schema.json
+---
+tools:
+  csv-csvlint: &csv-csvlint
+    lint-command: "csvlint"
+languages:
+  csv:
+    - <<: *csv-csvlint
