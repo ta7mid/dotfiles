@@ -3,7 +3,6 @@
 	"ccls": {
 		"command": ["ccls"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"cache": {
 				"directory": "/tmp/ccls-cache",
@@ -27,19 +26,16 @@
 	"neocmakelsp": {
 		"command": ["neocmakelsp", "stdio"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "source.cmake",
 	},
 	"cmake-language-server": {
 		"command": ["cmake-language-server"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "source.cmake",
 	},
 	"efm:cmake-lint": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/cmake-cmake-lint.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -51,7 +47,6 @@
 	"efm:gersemi": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/cmake-gersemi.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"documentFormatting": true,
 			"documentRangeFormatting": false,
@@ -63,7 +58,6 @@
 	"efm:hadolint": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/containerfile-hadolint.yaml"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -74,7 +68,6 @@
 	"docker": {
 		"command": ["docker-language-server", "start", "--stdio"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"dockercomposeExperimental": {
 				"composeSupport:": false,
@@ -91,7 +84,6 @@
 	"efm:csvlint": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/csv-csvlint.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -107,7 +99,6 @@
 	"efm:gitlint": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/gitcommit-gitlint.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -121,7 +112,6 @@
 	"efm:html-prettier": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/html-prettier.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -134,7 +124,6 @@
 	"efm:fixjson": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/json-fixjson.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -148,7 +137,6 @@
 	"efm:json-prettier": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/json-prettier.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -161,7 +149,6 @@
 	"quick-lint-js": {
 		"command": ["quick-lint-js", "--lsp-server"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "source.js | source.jsx | source.ts | source.tsx",
 	},
 
@@ -169,7 +156,6 @@
 	"efm:luacheck": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/lua-luacheck.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -183,7 +169,6 @@
 	"efm:stylua": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/lua-stylua.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -196,7 +181,6 @@
 	"efm:checkmake": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/makefile-checkmake.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -210,19 +194,16 @@
 	"rumdl": {
 		"command": ["rumdl", "server"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "text.html.markdown",
 	},
 	"markmark-lsp": {
 		"command": ["mise", "x", "--", "markmark-lsp", "--stdio"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "text.html.markdown",
 	},
 	"efm:markdownlint-cli": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/markdown-markdownlint-cli.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -236,7 +217,6 @@
 	"efm:markdownlint-cli2": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/markdown-markdownlint-cli2.yaml"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -252,7 +232,6 @@
 	"perlnavigator": {
 		"command": ["mise", "x", "--", "perlnavigator", "--stdio"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"settings": {
 			//"perlnavigator.perltidyProfile": "~/.perltidyrc",
 			//"perlnavigator.perlcriticProfile": "~/.perlcriticrc",
@@ -281,7 +260,6 @@
 	"efm:perlcritic": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/perl-perlcritic.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -295,7 +273,6 @@
 	"efm:perltidy": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/perl-perltidy.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -311,13 +288,11 @@
 	"ty": {
 		"command": ["ty", "server"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "source.python",
 	},
 	"efm:black": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/python-black.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -328,7 +303,6 @@
 	"efm:isort": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/python-isort.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -341,7 +315,6 @@
 	"efm:rst-lint": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/restructuredtext-rst-lint.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -355,7 +328,6 @@
 	"esbonio": {
 		"command": ["mise", "x", "--", "esbonio", "server"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "text.restructuredtext",
 	},
 
@@ -363,7 +335,6 @@
 	"solargraph": {
 		"command": ["mise", "x", "--", "solargraph", "stdio"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"diagnostics": true,
 		},
@@ -372,7 +343,6 @@
 	"rubocop": {
 		"command": ["mise", "x", "--", "rubocop", "--lsp"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "source.ruby | text.html.ruby | text.html.rails",
 	},
 	"sorbet": {
@@ -383,13 +353,11 @@
 			"--disable-watchman",
 		],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "source.ruby | text.html.ruby | text.html.rails",
 	},
 	"ruby-lsp": {
 		"command": ["mise", "x", "--", "ruby-lsp"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"enabledFeatures": {
 				"diagnostics": false,
@@ -405,7 +373,6 @@
 		"enabled": true,
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/shell-shellcheck.yaml"],
 		"initialization_options": {
-		"env": { "PATH": "/opt/homebrew/bin" },
 			"documentFormatting": true,
 			"documentRangeFormatting": true,
 			"hover": true,
@@ -417,7 +384,6 @@
 	"efm:shfmt": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/shell-shfmt.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"selector": "source.shell",
 		"initialization_options": {
 			"documentFormatting": true,
@@ -465,7 +431,6 @@
 	"digestif": {
 		"command": ["digestif"],
 		"enabled": true,
-		"env": { "PATH": "/Library/TeX/texbin" },
 		"selector": "text.tex | text.tex.latex",
 	},
 
@@ -480,7 +445,6 @@
 	"efm:vint": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/viml-vint.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -496,7 +460,6 @@
 	"efm:yamllint": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/yaml-yamllint.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -510,7 +473,6 @@
 	"efm:yaml-prettier": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/yaml-prettier.yaml"],
 		"enabled": false,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -530,7 +492,6 @@
 	"efm:prettierd": {
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/prettierd.yaml"],
 		"enabled": true,
-		"env": { "PATH": "/opt/homebrew/bin" },
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
