@@ -1,8 +1,8 @@
 {
 	// C, C++
 	"ccls": {
-		"command": ["ccls"],
 		"enabled": false,
+		"command": ["ccls"],
 		"initialization_options": {
 			"cache": {
 				"directory": "/tmp/ccls-cache",
@@ -24,18 +24,18 @@
 
 	// CMake
 	"neocmakelsp": {
-		"command": ["neocmakelsp", "stdio"],
 		"enabled": true,
+		"command": ["neocmakelsp", "stdio"],
 		"selector": "source.cmake",
 	},
 	"cmake-language-server": {
-		"command": ["cmake-language-server"],
 		"enabled": true,
+		"command": ["cmake-language-server"],
 		"selector": "source.cmake",
 	},
 	"efm:cmake-lint": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/cmake-cmake-lint.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/cmake-cmake-lint.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -45,8 +45,8 @@
 		"selector": "source.cmake",
 	},
 	"efm:gersemi": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/cmake-gersemi.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/cmake-gersemi.yaml"],
 		"initialization_options": {
 			"documentFormatting": true,
 			"documentRangeFormatting": false,
@@ -56,8 +56,8 @@
 
 	// Containerfile
 	"efm:hadolint": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/containerfile-hadolint.yaml"],
 		"enabled": true,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/containerfile-hadolint.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -66,8 +66,8 @@
 		"selector": "source.containerfile | source.dockerfile",
 	},
 	"docker": {
-		"command": ["docker-language-server", "start", "--stdio"],
 		"enabled": true,
+		"command": ["docker-language-server", "start", "--stdio"],
 		"initialization_options": {
 			"dockercomposeExperimental": {
 				"composeSupport:": false,
@@ -82,8 +82,8 @@
 
 	// CSV
 	"efm:csvlint": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/csv-csvlint.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/csv-csvlint.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -97,8 +97,8 @@
 
 	// Git commits
 	"efm:gitlint": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/gitcommit-gitlint.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/gitcommit-gitlint.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -110,8 +110,8 @@
 
 	// HTML
 	"efm:html-prettier": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/html-prettier.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/html-prettier.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -122,8 +122,8 @@
 
 	// JSON
 	"efm:fixjson": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/json-fixjson.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/json-fixjson.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -135,8 +135,8 @@
 		"selector": "source.json",
 	},
 	"efm:json-prettier": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/json-prettier.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/json-prettier.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -147,15 +147,15 @@
 
 	// JavaScript and TypeScript
 	"quick-lint-js": {
-		"command": ["quick-lint-js", "--lsp-server"],
 		"enabled": true,
+		"command": ["quick-lint-js", "--lsp-server"],
 		"selector": "source.js | source.jsx | source.ts | source.tsx",
 	},
 
 	// Lua
 	"efm:luacheck": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/lua-luacheck.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/lua-luacheck.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -167,8 +167,8 @@
 		"selector": "source.lua",
 	},
 	"efm:stylua": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/lua-stylua.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/lua-stylua.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -179,8 +179,8 @@
 
 	// Makefile
 	"efm:checkmake": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/makefile-checkmake.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/makefile-checkmake.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -192,18 +192,18 @@
 
 	// Markdown
 	"rumdl": {
-		"command": ["rumdl", "server"],
 		"enabled": true,
+		"command": ["rumdl", "server"],
 		"selector": "text.html.markdown",
 	},
 	"markmark-lsp": {
-		"command": ["mise", "x", "--", "markmark-lsp", "--stdio"],
 		"enabled": true,
+		"command": ["mise", "x", "--", "markmark-lsp", "--stdio"],
 		"selector": "text.html.markdown",
 	},
 	"efm:markdownlint-cli": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/markdown-markdownlint-cli.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/markdown-markdownlint-cli.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -215,8 +215,8 @@
 		"selector": "text.html.markdown",
 	},
 	"efm:markdownlint-cli2": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/markdown-markdownlint-cli2.yaml"],
 		"enabled": true,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/markdown-markdownlint-cli2.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -230,8 +230,8 @@
 
 	// Perl
 	"perlnavigator": {
-		"command": ["mise", "x", "--", "perlnavigator", "--stdio"],
 		"enabled": true,
+		"command": ["mise", "x", "--", "perlnavigator", "--stdio"],
 		"settings": {
 			//"perlnavigator.perltidyProfile": "~/.perltidyrc",
 			//"perlnavigator.perlcriticProfile": "~/.perlcriticrc",
@@ -258,8 +258,8 @@
 		"selector": "source.perl",
 	},
 	"efm:perlcritic": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/perl-perlcritic.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/perl-perlcritic.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -271,8 +271,8 @@
 		"selector": "source.perl",
 	},
 	"efm:perltidy": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/perl-perltidy.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/perl-perltidy.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -286,18 +286,18 @@
 
 	// Python
 	"pyrefly": {
-		"command": ["pyrefly", "lsp"],
 		"enabled": true,
+		"command": ["pyrefly", "lsp"],
 		"selector": "source.python"
 	},
 	"ty": {
-		"command": ["ty", "server"],
 		"enabled": true,
+		"command": ["ty", "server"],
 		"selector": "source.python",
 	},
 	"efm:black": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/python-black.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/python-black.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -306,8 +306,8 @@
 		"selector": "source.python",
 	},
 	"efm:isort": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/python-isort.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/python-isort.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -318,8 +318,8 @@
 
 	// reStructuredText, Sphinx
 	"efm:rst-lint": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/restructuredtext-rst-lint.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/restructuredtext-rst-lint.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -331,38 +331,38 @@
 		"selector": "source.restructuredtext",
 	},
 	"esbonio": {
-		"command": ["mise", "x", "--", "esbonio", "server"],
 		"enabled": true,
+		"command": ["mise", "x", "--", "esbonio", "server"],
 		"selector": "text.restructuredtext",
 	},
 
 	// Ruby
 	"solargraph": {
-		"command": ["mise", "x", "--", "solargraph", "stdio"],
 		"enabled": true,
+		"command": ["mise", "x", "--", "solargraph", "stdio"],
 		"initialization_options": {
 			"diagnostics": true,
 		},
 		"selector": "source.ruby | text.html.ruby | text.html.rails",
 	},
 	"rubocop": {
-		"command": ["mise", "x", "--", "rubocop", "--lsp"],
 		"enabled": true,
+		"command": ["mise", "x", "--", "rubocop", "--lsp"],
 		"selector": "source.ruby | text.html.ruby | text.html.rails",
 	},
 	"sorbet": {
+		"enabled": false,
 		"command": ["mise", "x", "--", "srb", "tc",
 			"--typed", "true",
 			"--enable-all-experimental-lsp-features",
 			"--lsp",
 			"--disable-watchman",
 		],
-		"enabled": false,
 		"selector": "source.ruby | text.html.ruby | text.html.rails",
 	},
 	"ruby-lsp": {
-		"command": ["mise", "x", "--", "ruby-lsp"],
 		"enabled": false,
+		"command": ["mise", "x", "--", "ruby-lsp"],
 		"initialization_options": {
 			"enabledFeatures": {
 				"diagnostics": false,
@@ -374,8 +374,8 @@
 
 	// shell
 	"efm:shellcheck": {
-		"selector": "source.shell",
 		"enabled": true,
+		"selector": "source.shell",
 		"command": ["efm-langserver", "-c", "~/share/efm-langserver/shell-shellcheck.yaml"],
 		"initialization_options": {
 			"documentFormatting": true,
@@ -387,8 +387,8 @@
 		},
 	},
 	"efm:shfmt": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/shell-shfmt.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/shell-shfmt.yaml"],
 		"selector": "source.shell",
 		"initialization_options": {
 			"documentFormatting": true,
@@ -397,8 +397,8 @@
 		},
 	},
 	"diagnosticls:shellcheck": {
-		"command": ["diagnostic-languageserver", "--stdio"],
 		"enabled": false,
+		"command": ["diagnostic-languageserver", "--stdio"],
 		"selector": "source.shell.bash",
 		"initialization_options": {
 			"linters": {
@@ -434,22 +434,22 @@
 
 	// TeX, LaTeX
 	"digestif": {
-		"command": ["digestif"],
 		"enabled": true,
+		"command": ["digestif"],
 		"selector": "text.tex | text.tex.latex",
 	},
 
 	// TOML
 	"tombi": {
-		"command": ["tombi", "lsp"],
 		"enabled": true,
+		"command": ["tombi", "lsp"],
 		"selector": "source.toml",
 	},
 
 	// Vim script
 	"efm:vint": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/viml-vint.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/viml-vint.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -463,8 +463,8 @@
 
 	// YAML
 	"efm:yamllint": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/yaml-yamllint.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/yaml-yamllint.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"completion": true,
@@ -476,8 +476,8 @@
 		"selector": "source.yaml",
 	},
 	"efm:yaml-prettier": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/yaml-prettier.yaml"],
 		"enabled": false,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/yaml-prettier.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
@@ -488,15 +488,15 @@
 
 	// Zig
 	"zls": {
-		"command": ["zls"],
 		"enabled": false,
+		"command": ["zls"],
 		"selector": "source.zig",
 	},
 
 	// Multiple languages
 	"efm:prettierd": {
-		"command": ["efm-langserver", "-c", "~/share/efm-langserver/prettierd.yaml"],
 		"enabled": true,
+		"command": ["efm-langserver", "-c", "~/share/efm-langserver/prettierd.yaml"],
 		"initialization_options": {
 			"codeAction": true,
 			"documentFormatting": true,
