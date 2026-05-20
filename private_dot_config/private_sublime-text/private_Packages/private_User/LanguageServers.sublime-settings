@@ -285,6 +285,11 @@
 	},
 
 	// Python
+	"pyrefly": {
+		"command": ["pyrefly", "lsp"],
+		"enabled": true,
+		"selector": "source.python"
+	},
 	"ty": {
 		"command": ["ty", "server"],
 		"enabled": true,
