@@ -1,4 +1,11 @@
 {
+	// GitHub Actions
+	"actions-languageserver": {
+		"enabled": false,
+		"command": ["mise", "x", "--", "actions-languageserver", "--stdio"],
+		"selector": "source.yaml",
+	},
+
 	// C, C++
 	"ccls": {
 		"enabled": false,
