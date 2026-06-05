@@ -1,9 +1,9 @@
 {
 	// GitHub Actions
 	"actions-languageserver": {
-		"enabled": false,
+		"enabled": true,
 		"command": ["mise", "x", "--", "actions-languageserver", "--stdio"],
-		"selector": "source.yaml",
+		"selector": "source.yaml.pipeline.github-actions",
 	},
 
 	// C, C++
